@@ -18,15 +18,19 @@
         html, body {
             margin: 0;
             height: 100%;
-            overflow: hidden; /* NO SCROLL */
         }
 
         .gallery {
             height: 100vh;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            /* auto-fit = no empty columns */
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+            /* rows auto-adjust */
             grid-auto-rows: 1fr;
-            box-sizing: border-box;
+
+            gap: 0; /* IMPORTANT: no white space */
         }
 
         .gallery img {
