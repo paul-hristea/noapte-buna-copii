@@ -39,6 +39,17 @@
             object-fit: contain; /* no cropping */
             display: block;
         }
+
+        .logo-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            pointer-events: none; /* does not block clicks */
+            max-width: 80vw;
+            max-height: 80vh;
+        }
     </style>
 </head>
 
@@ -67,5 +78,6 @@
     <img src="grafice/21.png" alt="">
     <img src="grafice/22.png" alt="">
 </div>
+<img src="logo-text.png" alt="" class="logo-overlay">
 </body>
 </html>
